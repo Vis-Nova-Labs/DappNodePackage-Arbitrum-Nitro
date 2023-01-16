@@ -3,7 +3,10 @@
   "version": "1.0.6",
   "description": "Arbitrum Nitro Node",
   "type": "service",
-  "author": "0xAtum",
+  "author": "0xAtum (https://github.com/0xAtum)",
+  "contributors": [
+    "Voss <voss@visnovalabs.io> (https://github.com/alexpeterson91)"
+  ],
   "upstreamVersion": "v2.0.9-51f9452",
   "upstreamRepo": "OffchainLabs/nitro",
   "upstreamArg": "UPSTREAM_VERSION",
@@ -20,5 +23,11 @@
     "type": "git",
     "url": "https://github.com/0xAtum/DappNodePackage-Arbitrum-Nitro.git"
   },
-  "license": "GPL-3.0"
+  "license": "GPL-3.0",
+  "globalEnvs": [
+    {
+      "envs": ["EXECUTION_CLIENT_MAINNET"],
+      "services": ["arbitrum-nitro.public.dappnode.eth"]
+    }
+  ]
 }

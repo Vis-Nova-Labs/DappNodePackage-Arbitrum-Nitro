@@ -12,7 +12,6 @@ services:
     volumes:
       - "data:/home/user/.arbitrum"
     environment:
-      ETH_RPC_URL: "http://geth.dappnode:8545"
       EXTRA_OPTS: "--http.api=net,web3,eth,debug"
     image: "arbitrum-nitro.public.dappnode.eth:1.0.6"
     restart: unless-stopped
