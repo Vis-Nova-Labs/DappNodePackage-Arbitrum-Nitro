@@ -5,10 +5,6 @@ services:
       context: build
       args:
         UPSTREAM_VERSION: v2.0.9-51f9452
-    ports:
-      - "8547"
-      - "8548"
-      - "9642"
     volumes:
       - "data:/home/user/.arbitrum"
     environment:
