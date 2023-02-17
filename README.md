@@ -1,10 +1,11 @@
-# Arbitrum Nitro Full Node for DappNode
+# Arbitrum Nitro Full Node for Dappnode
 
-This repo allows you to run a Aribtrum full node on [Dappnode](https://dappnode.io). I (0xAtum) will support this repo until Dappnode's team decides to support it officially.
+This repo allows you to run a Aribtrum full node on [Dappnode](https://dappnode.com). I (0xAtum) will support this repo until Dappnode's team decides to support it officially.
 
 ## Installation Prerequisites
 
-You'll need access to synced ETH node. No need to host it yourself, but if you do, you'll need a full Ethereum Mainnet Stack (Both Execution and Consensus Layer Clients) run locally.
+You'll need access to synced ETH node.
+No need to host it yourself, but if you do, you'll need a full Ethereum Mainnet Stack (Both Execution and Consensus Layer Clients) run locally.
 If you don't want to host a full stack Ethereum Node yourself be sure to update the ETH_RPC_URL in the Config Tab. By default it uses `http://geth.dappnode:8545`.
 
 ## Running an Arbitrum Nitro Node
