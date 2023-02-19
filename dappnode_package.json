@@ -13,6 +13,7 @@
   "upstreamArg": "UPSTREAM_VERSION",
   "categories": ["Developer tools", "Blockchain"],
   "architectures": ["linux/amd64"],
+  "chain": "ethereum",
   "exposable": [
     {
       "name": "Arbitrum Nitro JSON RPC",
