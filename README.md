@@ -1,6 +1,6 @@
 # Arbitrum Nitro Full Node for Dappnode
 
-This repo allows you to run a Aribtrum full node on [Dappnode](https://dappnode.com). I (0xAtum) will support this repo until Dappnode's team decides to support it officially.
+This repo allows you to run an Aribtrum One Nitro Rolllup Full Node on [Dappnode](https://dappnode.com). ~~I (0xAtum) will support this repo until Dappnode's team decides to support it officially.~~
 
 ## Installation Prerequisites
 
@@ -10,7 +10,7 @@ If you don't want to host a full stack Ethereum Node yourself be sure to update 
 
 ## Running an Arbitrum Nitro Node
 
-If this is your first time starting this Arbitrum One Nitro Node, go to the config tab and add `--init.url=https://snapshot.arbitrum.io/mainnet/nitro.tar` to the EXTRA_OPTS field in the config tab of the package.
+If this is your first time starting this Arbitrum One Nitro Node, go to the config tab and add `--init.url="https://snapshot.arbitrum.foundation/arb1/nitro-pruned.tar"` to the EXTRA_OPTS field in the config tab of the package.
 This will download the Genesis Database for you.
 Once the initial database has been downloaded, you can remove the flag.
 
