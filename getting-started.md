@@ -3,7 +3,7 @@
 
 ## Getting Started
 
- If this is your first time starting this Arbitrum One Nitro Node, go to the config tab and add `--init.url=https://snapshot.arbitrum.io/mainnet/nitro.tar` to the EXTRA_OPTS field. This will download the initial database for you.
+ If this is your first time starting this Arbitrum One Nitro Node, go to the config tab and add `--init.url="https://snapshot.arbitrum.foundation/arb1/nitro-pruned.tar"` to the EXTRA_OPTS field. This will download the initial database for you.
 Once the initial database has been downloaded, you can remove the flag.
 
 ### Important
