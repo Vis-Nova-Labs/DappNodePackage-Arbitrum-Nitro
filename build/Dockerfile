@@ -11,9 +11,8 @@ RUN mkdir -p /home/user/.arbitrum \
 
 USER user
 
-#ENTRYPOINT [ /usr/bin/entrypoint.sh ] resolving conflicts for testing
-ENTRYPOINT nitro --l1.url=$ETH_RPC_URL \
-  --l2.chain-id=42161 \
+ENTRYPOINT nitro --parent-chain.connection.url=$ETH_RPC_URL \
+  --chain.id=42161 \
   --http.addr=0.0.0.0 \
   --http.corsdomain=* \
   --http.vhosts=* \
