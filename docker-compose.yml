@@ -4,12 +4,12 @@ services:
     build:
       context: build
       args:
-        UPSTREAM_VERSION: v2.1.1-e9d8842
+        UPSTREAM_VERSION: v2.1.3-e815395
     volumes:
       - "data:/home/user/.arbitrum"
     environment:
       ETH_RPC_URL: "http://geth.dappnode:8545"
-      EXTRA_OPTS: "--http.api=net,web3,eth,arb,debug"
+      EXTRA_OPTS: "--http.api=net,web3,eth,debug"
     image: "arbitrum-nitro.public.dappnode.eth:1.0.10"
     restart: unless-stopped
 volumes:
