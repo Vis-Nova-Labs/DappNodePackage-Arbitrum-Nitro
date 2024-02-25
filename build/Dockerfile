@@ -9,7 +9,8 @@ RUN mkdir -p /home/user/.arbitrum \
 USER user
 
 ENTRYPOINT nitro --parent-chain.connection.url "${ETH_RPC_URL}" \
-  --parent-chain.blob-client.beacon-url="https://checkpoint-sync.dappnode.io"
+  --parent-chain.blob-client.beacon-url="https://checkpoint-sync.dappnode.io" \
+
   --chain.name=arb1 \
   --http.addr=0.0.0.0 \
   --http.corsdomain=* \
