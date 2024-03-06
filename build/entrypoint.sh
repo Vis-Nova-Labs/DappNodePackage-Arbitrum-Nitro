@@ -48,7 +48,7 @@ case $_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_MAINNET in
     ;;
 esac
     
-exec nitro --parent-chain.connection.url "${ETH_API}" \
+exec nitro --parent-chain.connection.url="${ETH_API}" \
     --parent-chain.blob-client.beacon-url="${BEACON_API}" \
     --chain.name=arb1 \
     --http.addr=0.0.0.0 \

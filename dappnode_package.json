@@ -20,7 +20,7 @@
   },
   "exposable": [
     {
-      "name": "Arbitrum Nitro JSON RPC",
+      "name": "Arbitrum Nitro JSON RPC (HTTP)",
       "description": "JSON RPC endpoint for Arbitrum Nitro",
       "serviceName": "arbitrum-nitro.public.dappnode.eth",
       "port": 8547
@@ -46,7 +46,7 @@
   "license": "GPL-3.0",
   "globalEnvs": [
     {
-      "envs": ["EXECUTION_CLIENT_MAINNET"],
+      "envs": ["EXECUTION_CLIENT_MAINNET", "CONSENSUS_CLIENT_MAINNET"],
       "services": ["arbitrum-nitro.public.dappnode.eth"]
     }
   ]
