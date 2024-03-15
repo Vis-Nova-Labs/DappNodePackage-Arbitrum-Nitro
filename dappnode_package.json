@@ -8,7 +8,7 @@
     "0xAtum (https://github.com/0xAtum)",
     "Voss <voss@visnovalabs.io> (https://github.com/alexpeterson91)"
   ],
-  "upstreamVersion": "v2.3.2-064fa11",
+  "upstreamVersion": "v2.3.2",
   "upstreamRepo": "OffchainLabs/nitro",
   "upstreamArg": "UPSTREAM_VERSION",
   "categories": ["Developer tools", "Blockchain"],
