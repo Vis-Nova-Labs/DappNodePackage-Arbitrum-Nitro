@@ -4,7 +4,7 @@
 if [ ! -d /home/user/.arbitrum/arb1/nitro/l2chaindata/ancient ]; then
     echo "Downloading initial snapshot, this may take a while..."
     # Concatenate EXTRA_OPTS with the --init.url flag
-    EXTRA_OPTS="--init.url=https://snapshot.arbitrum.foundation/arb1/nitro-pruned.tar ${EXTRA_OPTS}"
+    EXTRA_OPTS="--init.url=${INIT_SNAPSHOT_URL} ${EXTRA_OPTS}"
 fi
 
 case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_MAINNET in
@@ -47,7 +47,21 @@ case $_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_MAINNET in
     CL_API=$_DAPPNODE_GLOBAL_CONSENSUS_CLIENT_MAINNET
     ;;
 esac
-    
+
+if ${ETH_EL_RPC_SOURCE} == "Global" ; then
+    ETH_API=$EL_API
+else
+    ETH_API=$EL_CUSTOM_RPC
+fi
+
+if ${ETH_CL_RPC_SOURCE} == "Global" ; then
+    BEACON_API=$CL_API
+elif ${ETH_CL_RPC_SOURCE} == "Custom" ; then
+    BEACON_API=$CL_CUSTOM_RPC
+else
+    BEACON_API="https://checkpoint-sync.dappnode.io"
+
+
 exec nitro --parent-chain.connection.url="${ETH_API}" \
     --parent-chain.blob-client.beacon-url="${BEACON_API}" \
     --chain.name=arb1 \

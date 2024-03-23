@@ -20,6 +20,31 @@ fields:
     title: "ETH EL Custom Endpoint"
     description: "Custom ETH EL Endpoint URL with port"
     type: string
-  - id: 
+    if: { "eth1ElRpcEndpoint": { "enum": ["Custom"] } }
+  - id: beaconChainRpcEndpoint
+    target:
+      type: environment
+      name: ETH_CL_RPC_SOURCE
+      service: arbitrum-nitro.public.dappnode.eth
+    title: "Beacon Chain RPC Endpoint"
+    description: >- 
+      You must connect Arbitrum Nitro to an Ethereum Beacon Chain RPC, for full decentralization, we reccomend that you use your local ETH client instead of a public RPC,
+      However please note that if you are syncing your node for the first time you will need other APIs not enabled by default in your local Beacon Chain client in that case be sure to select the Dappnode Beacon Chain Endpoint to sync.
+      Once you are synced we request you switch to your local beacon client
+    required: true
+    enum:
+      - "Global"
+      - "Dappnode Remote Beacon Chain Endpoint"
+      - "Custom"
+    default: "Global"
+  - id: beaconChainRpcCustomEndpoint
+    target:
+      type: environment
+      name: ETH_CL_CUSTOM
+      service: arbitrum-nitro.public.dappnode.eth
+    title: "Beacon Chain Custom Endpoint"
+    description: "Custom Beacon Chain Endpoint URL "
+    type: string
+    if: { "beaconChainRpcEndpoint": { "enum": ["Custom"] } }
 
     
