@@ -4,7 +4,7 @@
 if [ ! -d /home/user/.arbitrum/arb1/nitro/l2chaindata/ancient ]; then
     echo "Downloading initial snapshot, this may take a while..."
     # Concatenate EXTRA_OPTS with the --init.url flag
-    EXTRA_OPTS="--init.url=${INIT_SNAPSHOT_URL} ${EXTRA_OPTS}"
+    EXTRA_OPTS="--init.url="${INIT_SNAPSHOT_URL}" ${EXTRA_OPTS}"
 fi
 
 case $_DAPPNODE_GLOBAL_EXECUTION_CLIENT_MAINNET in

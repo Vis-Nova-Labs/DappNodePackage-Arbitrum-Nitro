@@ -18,7 +18,7 @@ fields:
       name: ETH_EL_CUSTOM
       service: arbitrum-nitro.public.dappnode.eth
     title: "ETH EL Custom Endpoint"
-    description: "Custom ETH EL Endpoint URL with port"
+    description: "Custom ETH EL Endpoint URL"
     type: string
     if: { "eth1ElRpcEndpoint": { "enum": ["Custom"] } }
   - id: beaconChainRpcEndpoint
