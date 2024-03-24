@@ -6,7 +6,12 @@ fields:
       name: ETH_EL_RPC_SOURCE
       service: arbitrum-nitro.public.dappnode.eth
     title: "ETH EL RPC Endpoint"
-    description: "You must connect Arbitrum Nitro to an Ethereum EL RPC, for full decentralization, we reccomend that you use your local ETH client instead of a public RPC" 
+    description: >-
+      You must connect Arbitrum Nitro to an Ethereum EL RPC, for full decentralization, we reccomend that you use your local ETH client instead of a public RPC. 
+      Global will set your currently selected ETH mainnet EL client in the StakersUI/Reposittory tabs as your ETH EL RPC source.
+      Custom will open a new field to enter any ETH mainnet RPC, local or via a 3rd party provider.
+      Some EL clients work beter with Arbitrum, specifically Geth, but most should work just fine, if theres an issue you will see the errors in the logs of this package,
+      Currently Besu is not working well as an EL but we are looking into it.
     required: true
     enum:
       - "Global"
@@ -28,9 +33,10 @@ fields:
       service: arbitrum-nitro.public.dappnode.eth
     title: "Beacon Chain RPC Endpoint"
     description: >- 
-      You must connect Arbitrum Nitro to an Ethereum Beacon Chain RPC, for full decentralization, we reccomend that you use your local ETH client instead of a public RPC,
-      However please note that if you are syncing your node for the first time you will need other APIs not enabled by default in your local Beacon Chain client in that case be sure to select the Dappnode Beacon Chain Endpoint to sync.
-      Once you are synced we request you switch to your local beacon client
+      You must connect Arbitrum Nitro to an Ethereum Beacon Chain RPC, for full decentralization, we recommend that you use your local ETH client instead of a public RPC,
+      However please note that if you are syncing your node for the first time or after a few weeks of downtime, you may need other APIs not enabled by default in your local Beacon Chain client, 
+      In that case (ensure you see errors in the logs about your Beacon Endpoint first) select the Dappnode Beacon Chain Endpoint to sync, or select custom and use an endpoint from one of the many 3rd Party providers, (Alchemy, Ankr, Infura, etc.)
+      Once you are synced we request you switch to your local beacon client for full decentralization.
     required: true
     enum:
       - "Global"
@@ -46,5 +52,3 @@ fields:
     description: "Custom Beacon Chain Endpoint URL "
     type: string
     if: { "beaconChainRpcEndpoint": { "enum": ["Custom"] } }
-
-    
