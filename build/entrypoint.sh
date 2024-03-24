@@ -51,13 +51,13 @@ esac
 if [ "$ETH_EL_RPC_SOURCE" == "Global" ] ; then
     ETH_API=${EL_API}
 else
-    ETH_API=${EL_CUSTOM_RPC}
+    ETH_API=${ETH_EL_CUSTOM}
 fi
 
 if [ "$ETH_CL_RPC_SOURCE" == "Global" ]; then
     BEACON_API=${CL_API}
 elif [ "$ETH_CL_RPC_SOURCE" == "Custom" ] ; then
-    BEACON_API=${CL_CUSTOM_RPC}
+    BEACON_API=${ETH_CL_CUSTOM}
 else
     BEACON_API="https://checkpoint-sync.dappnode.io"
 fi
