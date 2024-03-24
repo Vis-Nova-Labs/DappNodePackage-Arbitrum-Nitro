@@ -24,4 +24,4 @@ Average on a period of 24 hours
 
 | Spec | Arbitrum Nitro Full Node | ETH Full Node |
 |--|--|--|
-| Storage (Sep 23, 2024) | 1.5TB | 1.6 TB Client Dependent |
+| Storage (Sep 23, 2024) | ~780 GB | 1.6 TB Client Dependent |
