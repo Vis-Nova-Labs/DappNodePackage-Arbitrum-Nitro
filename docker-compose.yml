@@ -4,7 +4,7 @@ services:
     build:
       context: build
       args:
-        UPSTREAM_VERSION: v2.3.3-6a1c1a7
+        UPSTREAM_VERSION: v2.3.3
     volumes:
       - "data:/home/user/.arbitrum"
     environment:
