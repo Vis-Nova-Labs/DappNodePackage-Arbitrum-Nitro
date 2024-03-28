@@ -14,7 +14,7 @@ services:
       ETH_CL_CUSTOM: ""
       INIT_SNAPSHOT_URL: "https://snapshot.arbitrum.foundation/arb1/nitro-pruned.tar"
       EXTRA_OPTS: "--http.api=net,web3,eth,arb,debug"
-    image: "arbitrum-nitro.public.dappnode.eth:1.0.11"
+    image: "arbitrum-nitro.public.dappnode.eth:1.0.12"
     restart: unless-stopped
 volumes:
   data: {}
