@@ -71,4 +71,5 @@ exec nitro --parent-chain.connection.url="${ETH_API}" \
     --ws.port=8548 \
     --ws.origins=* \
     --ws.addr=0.0.0.0 \
+    --validation.wasm.allowed-wasm-module-roots="home/user/nitro-legacy/machines,/home/user/target/machines" \
     $EXTRA_OPTS
