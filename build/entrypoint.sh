@@ -62,7 +62,6 @@ else
     BEACON_API="https://checkpoint-sync.dappnode.io"
 fi
 
-
 exec nitro --parent-chain.connection.url="${ETH_API}" \
     --parent-chain.blob-client.beacon-url="${BEACON_API}" \
     --chain.name=arb1 \
