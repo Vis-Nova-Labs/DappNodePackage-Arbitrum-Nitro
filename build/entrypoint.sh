@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#Function to check if database needs to be initialized
+# Function to check if database needs to be initialized
 if [ ! -d /home/user/.arbitrum/arb1/nitro/l2chaindata/ancient ]; then
     echo "Downloading initial snapshot, this may take a while..."
     # Concatenate EXTRA_OPTS with the --init.url flag
@@ -62,6 +62,7 @@ else
     BEACON_API="https://checkpoint-sync.dappnode.io"
 fi
 
+
 exec nitro --parent-chain.connection.url="${ETH_API}" \
     --parent-chain.blob-client.beacon-url="${BEACON_API}" \
     --chain.name=arb1 \
@@ -71,5 +72,5 @@ exec nitro --parent-chain.connection.url="${ETH_API}" \
     --ws.port=8548 \
     --ws.origins=* \
     --ws.addr=0.0.0.0 \
-    --validation.wasm.allowed-wasm-module-roots="home/user/nitro-legacy/machines,/home/user/target/machines" \
+    --validation.wasm.allowed-wasm-module-roots="/home/user/nitro-legacy/machines,/home/user/target/machines" \
     $EXTRA_OPTS
