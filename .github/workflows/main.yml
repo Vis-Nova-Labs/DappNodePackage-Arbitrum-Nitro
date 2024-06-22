@@ -16,15 +16,19 @@ jobs:
     if: github.event_name != 'push'
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
-      - run: npx @dappnode/dappnodesdk build --provider remote --skip_save
+        uses: actions/checkout@v4
+      - run: npx @dappnode/dappnodesdk build --provider remote --timeout 1h
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PINATA_API_KEY: ${{ secrets.PINATA_API_KEY }}
+          PINATA_SECRET_API_KEY: ${{ secrets.PINATA_SECRET_API_KEY }}
       
   release:
     name: Release
     runs-on: ubuntu-latest
     if: github.event_name == 'push' || github.event_name == 'repository_dispatch'
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Publish
         run: npx @dappnode/dappnodesdk publish patch --dappnode_team_preset --timeout 1h
         env:
